@@ -1,9 +1,12 @@
-FROM gcr.io/gem5-test/ubuntu-20.04_all-dependencies:stable
+# FROM gcr.io/gem5-test/ubuntu-20.04_all-dependencies:stable
+FROM ghcr.io/gem5/ubuntu-20.04_all-dependencies:latest
 
 RUN apt -y update
 RUN apt -y install git
 
-RUN git clone -b stable https://gem5.googlesource.com/public/gem5
+# RUN git clone -b stable https://gem5.googlesource.com/public/gem5
+RUN git clone -b stable https://github.com/gem5/gem5
+# COPY gem5 /gem5
 
 WORKDIR /gem5
 

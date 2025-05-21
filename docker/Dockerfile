@@ -1,4 +1,5 @@
-FROM gcr.io/gem5-test/ubuntu-20.04_all-dependencies:stable
+# FROM gcr.io/gem5-test/ubuntu-20.04_all-dependencies:stable
+FROM ghcr.io/gem5/ubuntu-20.04_all-dependencies:latest
 
 # Obtain the build gem5 binaries.
 COPY --from=gcr.io/gem5-test/gem5-builder:latest /gem5/build/X86/gem5.fast /usr/local/bin/gem5-x86
